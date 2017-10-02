@@ -134,6 +134,20 @@ public final class AutoDispose {
   }
 
   /**
+   * This method autocompletes generics correctly
+   */
+  public static <T> Function<Observable<? extends T>, ObservableSubscribeProxy<T>> autocompletes() {
+    return new ObservableScoper<>(Maybe.never());
+  }
+
+  /**
+   * This method does not autocomplete generics correctly
+   */
+  public static <T> Function<Observable<? extends T>, ObservableSubscribeProxy<T>> doesNotAutoComplete(Maybe<?> scope) {
+    return new ObservableScoper<>(scope);
+  }
+
+  /**
    * The factory for {@link Maybe} scopes.
    *
    * @param scope the target scope
