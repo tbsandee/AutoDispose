@@ -16,8 +16,8 @@
 
 rootProject.name = 'autodispose-root'
 include ':autodispose'
-include ':autodispose-android'
-include ':autodispose-android-archcomponents'
+//include ':autodispose-android'
+//include ':autodispose-android-archcomponents'
 include ':autodispose-kotlin'
-include ':sample'
+//include ':sample'
 include ':test-utils'
